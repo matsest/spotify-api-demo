@@ -154,6 +154,7 @@ Get-SpotifyAuthorizationCodeUrl
 $userAccessToken = Get-SpotifyAccessTokenByAuthorizationCode -AuthorizationCode $env:SPOTIFY_AUTHORIZATION_CODE
 
 # Testing some playlist statistics
+# Right-click on the playlist > Share > Copy Share Link. The link will contain the playlist ID. It is the string between playlist/ and ?si=.
 $playlistId = "<your_playlist_id_here>"  # Replace with your actual playlist ID
 
 $alltracks = Get-SpotifyPlaylistTracks -PlaylistId $playlistId -AccessToken $userAccessToken
