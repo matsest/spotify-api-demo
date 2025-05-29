@@ -17,6 +17,7 @@ See [main.ps1](./main.ps1)
 
 - Documentation : https://developer.spotify.com/documentation/web-api
 - Authorization Code Flow: https://developer.spotify.com/documentation/web-api/tutorials/code-flow
+- Scopes: https://developer.spotify.com/documentation/web-api/concepts/scopes
 - Playlist API: https://developer.spotify.com/documentation/web-api/reference/get-playlist
 
 ## License
