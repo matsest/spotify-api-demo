@@ -164,13 +164,13 @@ $numberOfArtists = ($alltracks.track.artists.name | Select-Object -Unique).Count
 $top50Artists = $alltracks.track.artists.name | Group-Object | Sort-Object -Property Count -Descending | Select-Object -First 50 Count, Name
 $artistsOnlyPlayedOnce = $alltracks.track.artists.name | Group-Object | Where-Object { $_.Count -eq 1 } | Select-Object -ExpandProperty Name
 
-$top50SongsByPopularity = $alltracks.track | Sort-Object id | Get-Unique -AsString | Sort-Object -Property popularity -Descending | ForEach-Object {
+$top50SongsByPopularity = $alltracks.track | Sort-Object id | Get-Unique -AsString | Sort-Object -Property popularity -Descending | Select-Object -First 50 | ForEach-Object {
     [PSCustomObject]@{
         Popularity = $_.popularity
         Name       = $_.name
         Artist     = ($_.artists | ForEach-Object { $_.name }) -join ', '
     }
-} | Select-Object -First 50
+}
 
 # Note use name and artists to group tracks, as some tracks have different ids but are the same song (e.g. remixes)
 $tracksPlayedMoreThanOnce = $alltracks.track | Group-Object name, artists | Where-Object { $_.Count -gt 1 } | ForEach-Object {
