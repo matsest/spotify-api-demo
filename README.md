@@ -1,6 +1,8 @@
 # Spotify API Demo
 
-Playing around with the Spotify API
+Playing around with the Spotify API using PowerShell.
+
+A selection of functions for using the Spotify API can be found in [spotify.psm1](./spotify.psm1).
 
 ## Prerequisites
 
@@ -11,7 +13,7 @@ Playing around with the Spotify API
 
 ## Usage
 
-See [main.ps1](./main.ps1)
+See [main.ps1](./main.ps1) for some examples
 
 ## References
 
