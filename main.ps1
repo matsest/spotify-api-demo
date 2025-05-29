@@ -1,6 +1,6 @@
 function Set-EnvFromEnvFile {
     param (
-        [string]$Path
+        [string]$Path = ".env"
     )
 
     if (-Not (Test-Path $Path)) {
